@@ -140,11 +140,10 @@ main {
 footer {
     position: relative;
     width: 100dvw;
-    height: 300px;
+    min-height: 300px;
     padding: 20px;
     background-color: var(--footer);
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 
@@ -158,11 +157,9 @@ footer {
     }
     
     .box {
-        width: 200px;
+        width: 100px;
         margin: 50px;
         color: #eee;
-        display: grid;
-        gap: 20px;
         letter-spacing: 1px;
         cursor: default;
         
