@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <title>Blog Kings</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li id="logo-box" class="lora-100" onclick="location = './'">
+                <img src="./favicon.svg" alt="Blog Kings">
+                <h2>
+                    Blog Kings
+                </h2>
+            </li>
+            <li id="search-box">
+                <img src="./assets/binoculars-fill.svg" alt="Search">
+                <input type="search" placeholder="Search">
+            </li>
+        </ul>
+        <menu class="montserrat hidden"> <!-- Ao ter mais funções no blog será usado o menu -->
+            <div id="toggle" onclick="toggleMenu()">
+                <figure>
+                    <img src="./assets/caret-right-fill.svg" alt=">">
+                </figure>
+            </div>
+            <li>
+                <a href="#">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Most Wanted
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Your Blogs
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Favorites
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Your Comments
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    About Us
+                </a>
+            </li>
+            <li id="footer-li"></li>
+        </menu>
+    </header>
+    <main class="montserrat" onclick="toggleMenu(false)">
+        <div class="container">
+            <h1>Title</h1>
+            <h2>Subtitle</h2>
+            <br>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem praesentium repudiandae culpa, dolores minus quasi voluptatibus quas assumenda, autem magni error neque sint est aliquid quia quae adipisci nostrum suscipit!</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque distinctio, expedita quisquam ducimus quas, quod consequatur quibusdam porro itaque eum perspiciatis tempore officia magni iste doloremque impedit esse quia facilis!</p>
+            <h1>Title</h1>
+            <h2>Subtitle</h2>
+            <br>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem praesentium repudiandae culpa, dolores minus quasi voluptatibus quas assumenda, autem magni error neque sint est aliquid quia quae adipisci nostrum suscipit!</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque distinctio, expedita quisquam ducimus quas, quod consequatur quibusdam porro itaque eum perspiciatis tempore officia magni iste doloremque impedit esse quia facilis!</p>
+        </div>
+    </main>
+    <footer onclick="toggleMenu(false)">
+        <div class="box">
+            <h3>References</h3>
+            <ul>
+                <li>Primeira</li>
+                <li>Segunda</li>
+                <li>Terceira</li>
+                <li>Quarta</li>
+            </ul>
+        </div>
+        <div class="box">
+            <h3>References</h3>
+            <ul>
+                <li>Primeira</li>
+                <li>Segunda</li>
+                <li>Terceira</li>
+                <li>Quarta</li>
+            </ul>
+        </div>
+        <div class="box">
+            <h3>References</h3>
+            <ul>
+                <li>Primeira</li>
+                <li>Segunda</li>
+                <li>Terceira</li>
+                <li>Quarta</li>
+            </ul>
+        </div>
+        <div class="box">
+            <h3>References</h3>
+            <ul>
+                <li>Primeira</li>
+                <li>Segunda</li>
+                <li>Terceira</li>
+                <li>Quarta</li>
+            </ul>
+        </div>
+        <code>Copyright &copy; - 2024 Blog Kings </code>
+    </footer>
+</body>
+</html>
