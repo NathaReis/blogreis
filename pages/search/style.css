@@ -1,0 +1,36 @@
+@import url(../../main.css);
+
+main {
+    margin-top: 80px;
+    height: calc(100dvh - 80px);
+    display: grid;
+    justify-content: center;
+}
+
+#search-box {
+    height: 100px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    margin: 50px;
+    
+    input {
+        width: calc(85dvw - 30px);
+        max-width: 800px;
+        height: 60px;
+        padding: 10px;
+        border: none;
+        outline: none;
+        font-size: 1.3rem;
+        background-color: transparent;
+        transition: .3s;
+    }
+    
+    img {
+        width: 30px;
+        margin-left: 20px;
+        cursor: pointer;
+        background-color: transparent;
+    }
+}

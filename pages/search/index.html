@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <title>Search</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <ul>
+                <li id="logo-box" class="lora-100" onclick="location = '../../'">
+                    <img src="../../favicon.svg" alt="Blog Kings">
+                    <h2>
+                        Blog Kings
+                    </h2>
+                </li>
+            </ul>
+            <menu class="montserrat hidden"> <!-- Ao ter mais funções no blog será usado o menu -->
+                <div id="toggle" onclick="toggleMenu()">
+                    <figure>
+                        <img src="../../assets/caret-right-fill.svg" alt=">">
+                    </figure>
+                </div>
+                <li>
+                    <a href="#">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Most Wanted
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Your Blogs
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Favorites
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Your Comments
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        About Us
+                    </a>
+                </li>
+                <li id="footer-li"></li>
+            </menu>
+        </header>
+        <main>
+            <article id="search-box">
+                <img src="../../assets/binoculars-fill.svg" alt="Search">
+                <input type="search" placeholder="Search">
+            </article>
+        </main>
+    </div>
+</body>
+</html>

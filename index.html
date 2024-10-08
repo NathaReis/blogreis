@@ -5,122 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script defer src="./script.js"></script>
     <title>Blog Kings</title>
 </head>
 <body>
-    <header>
-        <ul>
-            <li id="logo-box" class="lora-100" onclick="location = './'">
-                <img src="./favicon.svg" alt="Blog Kings">
-                <h2>
-                    Blog Kings
-                </h2>
-            </li>
-            <li id="search-box">
-                <img src="./assets/binoculars-fill.svg" alt="Search">
-                <input type="search" placeholder="Search">
-            </li>
-        </ul>
-        <menu class="montserrat hidden"> <!-- Ao ter mais funções no blog será usado o menu -->
-            <div id="toggle" onclick="toggleMenu()">
-                <figure>
-                    <img src="./assets/caret-right-fill.svg" alt=">">
-                </figure>
+    <div class="container">
+        <header>
+            <ul>
+                <li id="logo-box" class="lora-100" onclick="location = './'">
+                    <img src="./favicon.svg" alt="Blog Kings">
+                    <h2>
+                        Blog Kings
+                    </h2>
+                </li>
+                <li id="search-box">
+                    <img src="./assets/binoculars-fill.svg" alt="Search" class="mobile" style="--display: 'block';" onclick="searchPage()">
+                    <img src="./assets/binoculars-fill.svg" alt="Search" class="hidden-mobile">
+                    <input type="search" placeholder="Search" class="hidden-mobile">
+                </li>
+                <li id="theme-box" onclick="toggleTheme(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="yellow" class="bi bi-brightness-alt-high-fill" viewBox="0 0 16 16">
+                        <path d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3m8 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 1 1 .5.5m-13.5.5a.5.5 0 0 0 0-1h-2a.5.5 0 0 0 0 1zm11.157-6.157a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m-9.9 2.121a.5.5 0 0 0 .707-.707L3.05 5.343a.5.5 0 1 0-.707.707zM8 7a4 4 0 0 0-4 4 .5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5 4 4 0 0 0-4-4"/>
+                    </svg>
+                    <div class="moon"></div>
+                </li>
+            </ul>
+            <menu class="montserrat hidden"> <!-- Ao ter mais funções no blog será usado o menu -->
+                <div id="toggle" onclick="toggleMenu()">
+                    <figure>
+                        <img src="./assets/caret-right-fill.svg" alt=">">
+                    </figure>
+                </div>
+                <li>
+                    <a href="#">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Most Wanted
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Your Blogs
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Favorites
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Your Comments
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        About Us
+                    </a>
+                </li>
+                <li id="footer-li"></li>
+            </menu>
+        </header>
+        <main class="montserrat" onclick="toggleMenu(false)">
+            <div class="container-main">
+                <section>
+                    <article id="info">
+                        <div id="category">Investimento</div>
+                        <div>Oct 08, 2024</div>
+                        <div>Nathan R.</div>
+                        <div>10min de Leitura</div>
+                    </article>
+                </section>
+                <section id="blog-content">
+                    <article>
+                        <h1>Tesouro Selic</h1>
+                        <br>
+                        <img src="https://images.pexels.com/photos/1029606/pexels-photo-1029606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem praesentium repudiandae culpa, dolores minus quasi voluptatibus quas assumenda, autem magni error neque sint est aliquid quia quae adipisci nostrum suscipit!</p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque distinctio, expedita quisquam ducimus quas, quod consequatur quibusdam porro itaque eum perspiciatis tempore officia magni iste doloremque impedit esse quia facilis!</p>
+                    </article>
+                    <article>
+                        <h1>Title</h1>
+                        <br>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem praesentium repudiandae culpa, dolores minus quasi voluptatibus quas assumenda, autem magni error neque sint est aliquid quia quae adipisci nostrum suscipit!</p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque distinctio, expedita quisquam ducimus quas, quod consequatur quibusdam porro itaque eum perspiciatis tempore officia magni iste doloremque impedit esse quia facilis!</p>
+                    </article>
+                    <article id="summary">
+                        <div class="box">
+                            <h1>Content</h1>
+                            <ul>
+                                <li>
+                                    <a href="#primeiro">Primeiro</a>
+                                </li>
+                                <li>
+                                    <a href="#segundo">Segundo</a>
+                                    <ul style="margin-left: 50px;">
+                                        <li>
+                                            <a href="#segundoa">A.Segundo</a>
+                                        </li>
+                                        <li>
+                                            <a href="#segundob">B.Segundo</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article id="primeiro">
+                        <h1>Primeiro</h1>
+                        <br>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem praesentium repudiandae culpa, dolores minus quasi voluptatibus quas assumenda, autem magni error neque sint est aliquid quia quae adipisci nostrum suscipit!</p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque distinctio, expedita quisquam ducimus quas, quod consequatur quibusdam porro itaque eum perspiciatis tempore officia magni iste doloremque impedit esse quia facilis!</p>
+                        <div class="card-add">
+                            <img src="https://images.pexels.com/photos/2763246/pexels-photo-2763246.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                        </div>
+                    </article>
+                    <article id="segundo">
+                        <h1>Segundo</h1>
+                        <br>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem praesentium repudiandae culpa, dolores minus quasi voluptatibus quas assumenda, autem magni error neque sint est aliquid quia quae adipisci nostrum suscipit!</p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque distinctio, expedita quisquam ducimus quas, quod consequatur quibusdam porro itaque eum perspiciatis tempore officia magni iste doloremque impedit esse quia facilis!</p>
+                        
+                        <h1 id="segundoa" class="space">A.Segundo</h1>
+                        <br>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem praesentium repudiandae culpa, dolores minus quasi voluptatibus quas assumenda, autem magni error neque sint est aliquid quia quae adipisci nostrum suscipit!</p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque distinctio, expedita quisquam ducimus quas, quod consequatur quibusdam porro itaque eum perspiciatis tempore officia magni iste doloremque impedit esse quia facilis!</p>
+    
+                        <h1 id="segundob" class="space">B.Segundo</h1>
+                        <br>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem praesentium repudiandae culpa, dolores minus quasi voluptatibus quas assumenda, autem magni error neque sint est aliquid quia quae adipisci nostrum suscipit!</p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque distinctio, expedita quisquam ducimus quas, quod consequatur quibusdam porro itaque eum perspiciatis tempore officia magni iste doloremque impedit esse quia facilis!</p>
+                    </article>
+                </section>
             </div>
-            <li>
-                <a href="#">
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    Most Wanted
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    Your Blogs
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    Favorites
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    Your Comments
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    About Us
-                </a>
-            </li>
-            <li id="footer-li"></li>
-        </menu>
-    </header>
-    <main class="montserrat" onclick="toggleMenu(false)">
-        <div class="container">
-            <h1>Title</h1>
-            <h2>Subtitle</h2>
-            <br>
-            <br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem praesentium repudiandae culpa, dolores minus quasi voluptatibus quas assumenda, autem magni error neque sint est aliquid quia quae adipisci nostrum suscipit!</p>
-            <br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque distinctio, expedita quisquam ducimus quas, quod consequatur quibusdam porro itaque eum perspiciatis tempore officia magni iste doloremque impedit esse quia facilis!</p>
-            <h1>Title</h1>
-            <h2>Subtitle</h2>
-            <br>
-            <br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem praesentium repudiandae culpa, dolores minus quasi voluptatibus quas assumenda, autem magni error neque sint est aliquid quia quae adipisci nostrum suscipit!</p>
-            <br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque distinctio, expedita quisquam ducimus quas, quod consequatur quibusdam porro itaque eum perspiciatis tempore officia magni iste doloremque impedit esse quia facilis!</p>
-        </div>
-    </main>
-    <footer onclick="toggleMenu(false)">
-        <div class="box">
-            <h3>References</h3>
-            <ul>
-                <li>Primeira</li>
-                <li>Segunda</li>
-                <li>Terceira</li>
-                <li>Quarta</li>
-            </ul>
-        </div>
-        <div class="box">
-            <h3>References</h3>
-            <ul>
-                <li>Primeira</li>
-                <li>Segunda</li>
-                <li>Terceira</li>
-                <li>Quarta</li>
-            </ul>
-        </div>
-        <div class="box">
-            <h3>References</h3>
-            <ul>
-                <li>Primeira</li>
-                <li>Segunda</li>
-                <li>Terceira</li>
-                <li>Quarta</li>
-                <li>Quarta</li>
-                <li>Quarta</li>
-                <li>Quarta</li>
-                <li>Quarta</li>
-            </ul>
-        </div>
-        <div class="box">
-            <h3>References</h3>
-            <ul>
-                <li>Primeira</li>
-                <li>Segunda</li>
-                <li>Terceira</li>
-                <li>Quarta</li>
-            </ul>
-        </div>
-        <code>Copyright &copy; - 2024 Blog Kings </code>
-    </footer>
+        </main>
+        <footer onclick="toggleMenu(false)">
+            <code>Copyright &copy; - 2024 Blog Kings </code>
+        </footer>
+    </div>
 </body>
 </html>
