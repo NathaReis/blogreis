@@ -185,6 +185,14 @@ menu {
         img {
             width: 30px;
         }
+
+        p {
+            cursor: pointer;
+        }
+    }
+
+    li:hover img {
+        filter: invert(100%);
     }
 
     #footer-li {
