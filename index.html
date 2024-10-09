@@ -6,6 +6,7 @@
     <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script type="module" src="./app-modules.js"></script>
     <script defer src="./script.js"></script>
     <title>Blog Kings</title>
 </head>
@@ -20,57 +21,46 @@
                     </h2>
                 </li>
                 <li id="search-box">
-                    <img src="./assets/binoculars-fill.svg" alt="Search" class="mobile" style="--display: 'block';" onclick="searchPage()">
+                    <img src="./assets/list.svg" alt="Search" class="mobile" style="--display: 'block';" onclick="searchPage()">
                     <img src="./assets/binoculars-fill.svg" alt="Search" class="hidden-mobile">
                     <input type="search" placeholder="Search" class="hidden-mobile">
                 </li>
-                <li id="theme-box" onclick="toggleTheme(this)">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="yellow" class="bi bi-brightness-alt-high-fill" viewBox="0 0 16 16">
-                        <path d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3m8 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 1 1 .5.5m-13.5.5a.5.5 0 0 0 0-1h-2a.5.5 0 0 0 0 1zm11.157-6.157a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m-9.9 2.121a.5.5 0 0 0 .707-.707L3.05 5.343a.5.5 0 1 0-.707.707zM8 7a4 4 0 0 0-4 4 .5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5 4 4 0 0 0-4-4"/>
-                    </svg>
-                    <div class="moon"></div>
-                </li>
             </ul>
-            <menu class="montserrat hidden"> <!-- Ao ter mais funções no blog será usado o menu -->
+            <menu class="montserrat"> <!-- Ao ter mais funções no blog será usado o menu -->
                 <div id="toggle" onclick="toggleMenu()">
                     <figure>
                         <img src="./assets/caret-right-fill.svg" alt=">">
                     </figure>
                 </div>
-                <li>
-                    <a href="#">
+                <li-theme class="hidden-mobile"></li-theme>
+                <li onclick="location = './'">
+                    <img src="./assets/house.svg" alt="House">
+                    <p>
                         Home
-                    </a>
+                    </p>
                 </li>
-                <li>
-                    <a href="#">
-                        Most Wanted
-                    </a>
+                <li onclick="location = './'">
+                    <img src="./assets/house.svg" alt="House">
+                    <p>
+                        Home
+                    </p>
                 </li>
-                <li>
-                    <a href="#">
-                        Your Blogs
-                    </a>
+                <li onclick="location = './'">
+                    <img src="./assets/house.svg" alt="House">
+                    <p>
+                        Home
+                    </p>
                 </li>
-                <li>
-                    <a href="#">
-                        Favorites
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        Your Comments
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        About Us
-                    </a>
+                <li onclick="location = './'">
+                    <img src="./assets/house.svg" alt="House">
+                    <p>
+                        Home
+                    </p>
                 </li>
                 <li id="footer-li"></li>
             </menu>
         </header>
-        <main class="montserrat" onclick="toggleMenu(false)">
+        <main class="montserrat" onclick="toggleMenu(true)">
             <div class="container-main">
                 <section>
                     <article id="info">
@@ -153,9 +143,45 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque distinctio, expedita quisquam ducimus quas, quod consequatur quibusdam porro itaque eum perspiciatis tempore officia magni iste doloremque impedit esse quia facilis!</p>
                     </article>
                 </section>
+                <section id="author">
+                    <article class="card">
+                        <fieldset>
+                            <h3 class="title">Mais sobre 'Autor'</h3>
+                        </fieldset>
+                        <fieldset>
+                            <figure>
+                                <img src="https://images.pexels.com/photos/7794018/pexels-photo-7794018.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ilustrate">
+                            </figure>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nostrum atque fugit vero labore. Quisquam facere eaque eum. Eos, molestias! Consequatur quasi inventore cupiditate culpa est adipisci incidunt deserunt. Eveniet.
+                            </p>
+                        </fieldset>
+                    </article>
+                </section>
+                <section id="indications">
+                    <h1>Related:</h1>
+                    <article>
+                        <div class="color"></div>
+                        <div class="text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatibus, quia perspiciatis dicta maxime aliquam vitae, id excepturi iusto aperiam corporis dolor, hic quae officia. Ratione incidunt vitae rem hic?</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="color"></div>
+                        <div class="text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatibus, quia perspiciatis dicta maxime aliquam vitae, id excepturi iusto aperiam corporis dolor, hic quae officia. Ratione incidunt vitae rem hic?</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="color"></div>
+                        <div class="text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatibus, quia perspiciatis dicta maxime aliquam vitae, id excepturi iusto aperiam corporis dolor, hic quae officia. Ratione incidunt vitae rem hic?</p>
+                        </div>
+                    </article>
+                </section>
             </div>
         </main>
-        <footer onclick="toggleMenu(false)">
+        <footer onclick="toggleMenu(true)">
             <code>Copyright &copy; - 2024 Blog Kings </code>
         </footer>
     </div>

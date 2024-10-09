@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
 }
 
-h1, h2, h5, p {
+h1, h2, h3, h5, p {
     cursor: default;
 }
 
@@ -19,7 +19,8 @@ h1, h2, h5, p {
     --text: #000;
     --header: #cccccc;
     --headerZindex: 1000;
-    --footer: #212B2A;
+    --footer: #2e3a39;
+    --emphasis: #ffec7d;
 }
 
 .dark:root {
@@ -30,6 +31,7 @@ h1, h2, h5, p {
     --header: #b3b3b3;
     --text: #eee;
     --footer: #1d1d1d;
+    --emphasis: #eeabab;
 }
 
 .container {
@@ -43,11 +45,12 @@ header ul {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100dvw;
     height: 80px;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
+    gap: 20px;
     background-color: var(--header);
     list-style: none;
     z-index: var(--headerZindex);
@@ -82,7 +85,7 @@ header ul li#theme-box.dark {
     transform: rotateZ(180deg);
 
     .moon::after {
-        transform: rotateZ(180deg);
+        transform: rotateZ(-180deg);
         position: absolute;
         content: '';
         top: -5px;
@@ -131,7 +134,7 @@ header ul li#theme-box {
 }
 
 menu.active {
-    width: 100%;
+    width: 350px;
 
     #toggle {
         img {
@@ -171,16 +174,21 @@ menu {
     }
 
     li {
-        margin-left: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 20px;
+        margin-left: 10px;
+        cursor: pointer;
+        color: var(--text);
 
-        a {
-            text-decoration: none;
-            color: black;
+        img {
+            width: 30px;
         }
     }
 
     #footer-li {
-        width: 100%;
+        width: 350px;
         max-width: 400px;
         height: 100%;
         background-color: var(--primary-800);
