@@ -20,19 +20,44 @@
                         Blog Kings
                     </h2>
                 </li>
-                <li id="search-box">
-                    <img src="./assets/list.svg" alt="Search" class="mobile" style="--display: 'block';" onclick="searchPage()">
-                    <img src="./assets/binoculars-fill.svg" alt="Search" class="hidden-mobile">
-                    <input type="search" placeholder="Search" class="hidden-mobile">
-                </li>
+                <li-theme></li-theme>
             </ul>
-            <menu class="montserrat"> <!-- Ao ter mais funções no blog será usado o menu -->
-                <div id="toggle" onclick="toggleMenu()">
+            <menu class="montserrat hidden-mobile"> <!-- Ao ter mais funções no blog será usado o menu -->
+                <div class="toggle" onclick="toggleMenu()" class="hidden-desktop">
                     <figure>
                         <img src="./assets/caret-right-fill.svg" alt=">">
                     </figure>
                 </div>
-                <li-theme class="hidden-mobile"></li-theme>
+                <li onclick="location = './'">
+                    <img src="./assets/house.svg" alt="House">
+                    <p>
+                        Home
+                    </p>
+                </li>
+                <li onclick="location = './'">
+                    <img src="./assets/house.svg" alt="House">
+                    <p>
+                        Home
+                    </p>
+                </li>
+                <li onclick="location = './'">
+                    <img src="./assets/house.svg" alt="House">
+                    <p>
+                        Home
+                    </p>
+                </li>
+                <li onclick="location = './'">
+                    <img src="./assets/house.svg" alt="House">
+                    <p>
+                        Home
+                    </p>
+                </li>
+                <li id="footer-li"></li>
+            </menu>
+            <menu class="montserrat mobile" style="--display: grid;"> <!-- Ao ter mais funções no blog será usado o menu -->
+                <div class="toggle" onclick="toggleMenu()">
+                    <div id="hamburger" class="active"></div>
+                </div>
                 <li onclick="location = './'">
                     <img src="./assets/house.svg" alt="House">
                     <p>
@@ -62,6 +87,14 @@
         </header>
         <main class="montserrat" onclick="toggleMenu(true)">
             <div class="container-main">
+                <section id="search-box">
+                    <article>
+                        <figure>
+                            <img src="./assets/binoculars-fill.svg" alt="Search">
+                        </figure>
+                        <input type="search" placeholder="Search">
+                    </article>
+                </section>
                 <section>
                     <article id="info">
                         <div id="category">Investimento</div>

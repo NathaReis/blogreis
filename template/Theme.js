@@ -43,7 +43,7 @@ template.innerHTML = `
                 width: 24px;
                 height: 15px;
                 border-radius: 50%;
-                background-color: var(--secundary);
+                background-color: var(--header);
             }
             
             .moon::after {
