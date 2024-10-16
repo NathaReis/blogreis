@@ -127,8 +127,6 @@ main {
         #author {
             .card {
                 display: grid;
-                align-items: center;
-                justify-content: center;
                 box-shadow: 0 0 5px #0002;
                 padding: 40px;
                 border-radius: 20px;
@@ -136,22 +134,14 @@ main {
                 border-left: 5px solid var(--primary);
                 background-color: var(--secundary);
                 
-                fieldset {
-                    border: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-around;
-                    gap: 40px;
-                }
-
-                p {
-                    font-size: 1rem;
-                }
-
-                img {
+                figure img {
                     width: 70px;
                     height: 70px;
                     border-radius: 50%;
+                }
+                
+                p {
+                    font-size: 1rem;
                 }
             }
         }

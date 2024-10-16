@@ -25,7 +25,9 @@
             <menu class="montserrat hidden-mobile"> <!-- Ao ter mais funções no blog será usado o menu -->
                 <div class="toggle" onclick="toggleMenu()" class="hidden-desktop">
                     <figure>
-                        <img src="./assets/caret-right-fill.svg" alt=">">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                        </svg>
                     </figure>
                 </div>
                 <li onclick="location = './'">
@@ -55,8 +57,12 @@
                 <li id="footer-li"></li>
             </menu>
             <menu class="montserrat mobile" style="--display: grid;"> <!-- Ao ter mais funções no blog será usado o menu -->
-                <div class="toggle" onclick="toggleMenu()">
-                    <div id="hamburger" class="active"></div>
+                <div class="toggle" onclick="toggleMenu()" class="hidden-desktop">
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                        </svg>
+                    </figure>
                 </div>
                 <li onclick="location = './'">
                     <img src="./assets/house.svg" alt="House">
@@ -85,9 +91,9 @@
                 <li id="footer-li"></li>
             </menu>
         </header>
-        <main class="montserrat" onclick="toggleMenu(true)">
+        <main class="montserrat">
             <div class="container-main">
-                <section id="search-box">
+                <!-- <section id="search-box">
                     <article>
                         <figure>
                             <img src="./assets/binoculars-fill.svg" alt="Search">
@@ -102,8 +108,8 @@
                         <div>Nathan R.</div>
                         <div>10min de Leitura</div>
                     </article>
-                </section>
-                <section id="blog-content">
+                </section> -->
+                <!-- <section id="blog-content">
                     <article>
                         <h1>Tesouro Selic</h1>
                         <br>
@@ -175,20 +181,16 @@
                         <br>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque distinctio, expedita quisquam ducimus quas, quod consequatur quibusdam porro itaque eum perspiciatis tempore officia magni iste doloremque impedit esse quia facilis!</p>
                     </article>
-                </section>
+                </section> -->
                 <section id="author">
                     <article class="card">
-                        <fieldset>
-                            <h3 class="title">Mais sobre 'Autor'</h3>
-                        </fieldset>
-                        <fieldset>
-                            <figure>
-                                <img src="https://images.pexels.com/photos/7794018/pexels-photo-7794018.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ilustrate">
-                            </figure>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nostrum atque fugit vero labore. Quisquam facere eaque eum. Eos, molestias! Consequatur quasi inventore cupiditate culpa est adipisci incidunt deserunt. Eveniet.
-                            </p>
-                        </fieldset>
+                        <h3 class="title">'Autor'</h3>
+                        <figure>
+                            <img src="https://images.pexels.com/photos/7794018/pexels-photo-7794018.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ilustrate">
+                        </figure>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nostrum atque fugit vero labore. Quisquam facere eaque eum. Eos, molestias! Consequatur quasi inventore cupiditate culpa est adipisci incidunt deserunt. Eveniet.
+                        </p>
                     </article>
                 </section>
                 <section id="indications">
@@ -214,7 +216,7 @@
                 </section>
             </div>
         </main>
-        <footer onclick="toggleMenu(true)">
+        <footer>
             <code>Copyright &copy; - 2024 Blog Kings </code>
         </footer>
     </div>

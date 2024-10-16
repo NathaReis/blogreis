@@ -4,12 +4,8 @@ function toggleMenu(desativated='toggle') {
         if(desativated === 'toggle') return $menu.classList.toggle("active");
         desativated ? $menu.classList.remove("active") : $menu.classList.add("active");
     });
-    
-    const $hamburger = document.querySelector("#hamburger");
-    if(desativated === 'toggle') return $hamburger.classList.toggle("active");
-    desativated ? $hamburger.classList.remove("active") : $hamburger.classList.add("active");
 }
-if(window.innerWidth >= 1450) {
+if(window.innerWidth >= 1330) {
     toggleMenu(false)
 }
 

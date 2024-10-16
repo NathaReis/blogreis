@@ -136,8 +136,8 @@ header ul li#theme-box {
 menu.active {
     width: 350px;
 
-    #toggle {
-        img {
+    .toggle {
+        svg {
             transform: rotateY(0deg);
             filter: drop-shadow(0 0 10px #0004);
         }
@@ -169,11 +169,12 @@ menu {
         top: 10px;
         right: 10px;
 
-        img {
+        svg {
             width: 25px;
             cursor: pointer;
             transform: rotateY(180deg);
             transition: .5s;
+            fill: var(--text);
         }
     }
 
@@ -210,11 +211,21 @@ menu {
 }
 
 menu.mobile.active {
+    width: 100dvw;
     height: calc(100dvh - 80px);
     background-color: var(--secundary);
 
     li {
         display: flex;
+    }
+
+    .toggle {
+        left: auto;
+        right: 10px;
+
+        svg {
+            width: 25px;
+        }
     }
 }
 
@@ -225,53 +236,18 @@ menu.mobile {
         display: none;
     }
 
-    #hamburger.active {
-        transform: rotateZ(0deg);
-    }
-    
-    #hamburger.active::before {
-        display: block;
-    }
-    
-    #hamburger.active::after {
-        transform: rotateZ(0deg);
+    .toggle {
+        position: absolute;
         top: 10px;
+        left: 10px;
+
+        svg {
+            width: 15px;
+        }
     }
-    
-    #hamburger {
-        margin-top: 20px;
-        width: 40px;
-        height: 3px;
-        background-color: #fff;
-        cursor: pointer;
-        transform: rotateZ(45deg);
-        transition: .3s;
-    }
-    
-    #hamburger::before {
-        position: absolute;
-        content: '';
-        display: none;
-        width: 40px;
-        height: 3px;
-        right: 0;
-        top: -10px;
-        background-color: #fff;
-        cursor: pointer;
-        transition: .3s;
-    }
-    
-    #hamburger::after {
-        position: absolute;
-        content: '';
-        width: 40px;
-        height: 3px;
-        right: 0;
-        top: 0px;
-        background-color: #fff;
-        cursor: pointer;
-        transform: rotateZ(90deg);
-        transition: .3s;
+
+    #footer-li {
+        width: 100dvw;
     }
 }
 
